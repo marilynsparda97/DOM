@@ -5,9 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dark Mode Toggle</title>
     <style>
-      /* Stile di default (Light Mode) */
       body {
-        transition: background-color 0.3s, color 0.3s; /* Rende il cambio più fluido */
+        transition: background-color 0.3s, color 0.3s; 
       }
 
       /* Classe per la Dark Mode */
@@ -22,7 +21,21 @@
     <div>
       <button class="btn">Attiva Dark Mode</button>
     </div>
+    <script>
+    const button = document.querySelector('.btn');
 
+button.addEventListener('click', () => {
+        
+        document.body.classList.toggle('theme');
+
+        if (document.body.classList.contains('theme')) {
+          button.innerText = "Disattiva Dark Mode";
+        } else {
+          button.innerText = "Attiva Dark Mode";
+        }
+      });
+    
+    </script>
    
   </body>
 </html>
