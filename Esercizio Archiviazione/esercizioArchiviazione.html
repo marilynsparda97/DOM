@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salvataggio Form Locale</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-family: sans-serif;
+            min-height: 100vh;
+            margin: 0;
+        }
+        .form {
+            display: flex;
+            flex-direction: column;
+            max-width: 300px;
+            gap: 16px;
+            margin-bottom: 16px;
+        }
+        .btn {
+            padding: 10px 20px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Il form di <span class="title-name">...</span></h1>
+    <div class="form">
+        <label for="email">Email</label>
+        <input type="email" name="email" class="email" placeholder="email">
+        <label for="firstname">Name</label>
+        <input type="text" name="firstname" class="firstname" placeholder="firstname">
+        <label for="lastname">Surname</label>
+        <input type="text" name="lastname" class="lastname" placeholder="lastname">
+    </div>
+    <button class="btn">Salva</button>
+    <p class="printedform"></p>
+</body>
+</html>
