@@ -3,14 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Esercizio Oggetto Person</title>
-    <style>
-      body { font-family: sans-serif; padding: 20px; line-height: 1.6; }
-      #container { background: #f4f4f4; padding: 20px; border-radius: 8px; width: 300px; }
-      form div { margin-bottom: 10px; }
-      label { display: block; font-weight: bold; }
-      input { width: 100%; padding: 5px; box-sizing: border-box; }
-    </style>
+    <title>Esercizio DOM e JSON</title>
   </head>
   <body>
     <div id="container">
@@ -30,7 +23,7 @@
       </form>
     </div>
     <script>
-     const firstNameValue = document.getElementById('firstName').value;
+      const firstNameValue = document.getElementById('firstName').value;
       const lastNameValue = document.getElementById('lastName').value;
       const ageValue = document.getElementById('age').value;
       const person = {
@@ -38,11 +31,11 @@
         lastName: lastNameValue,
         age: ageValue
       };
-      const form = document.querySelector('form');
+      const formElement = document.querySelector('form');
       const personJson = JSON.stringify(person);
-      form.setAttribute('data-person', personJson);
+      formElement.setAttribute('data-person', personJson);
       console.log("Oggetto creato:", person);
-      console.log("Attributo data-person aggiunto al form:", form.getAttribute('data-person'));
+      console.log("Attributo HTML impostato:", formElement.getAttribute('data-person'));
     </script>
   </body>
 </html>
